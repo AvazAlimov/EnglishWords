@@ -1,0 +1,27 @@
+.root{
+    -fx-background-color: #0097a7;
+}
+
+.button{
+    -fx-background-color: #ffc107;
+    -fx-pref-width: 240px;
+    -fx-pref-height: 80px;
+    -fx-font-size: 32px;
+    -fx-text-fill: #212121;
+    -fx-font-family: "Cocon";
+}
+
+.button:pressed{
+    -fx-text-fill: #fff;
+    -fx-background-color: #ffa107;
+}
+
+.text-field{
+    -fx-alignment: center-left;
+    -fx-pref-width: 480px;
+    -fx-pref-height: 80px;
+    -fx-font-size: 32px;
+    -fx-text-fill: #212121;
+    -fx-font-family: "Cocon";
+    -fx-prompt-text-fill: #757575;
+}

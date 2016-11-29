@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.control.Separator?>
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.76-ea"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddWord">
+    <rowConstraints>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+    </rowConstraints>
+
+    <TextField fx:id="name" onKeyPressed="#textChanged"/>
+    <TextField fx:id="meaning" onKeyPressed="#textChanged" GridPane.rowIndex="1"/>
+
+    <HBox GridPane.rowIndex="2">
+        <Button fx:id="addWord" onAction="#addWord" mnemonicParsing="false" text="Button" GridPane.halignment="CENTER"/>
+        <Separator prefWidth="20" visible="false"/>
+        <Button fx:id="cancel" onAction="#backToSettings" mnemonicParsing="false" text="Button"
+                GridPane.halignment="CENTER"/>
+    </HBox>
+
+    <stylesheets>
+        <URL value="@Style.css"/>
+    </stylesheets>
+</GridPane>
