@@ -25,3 +25,9 @@
     -fx-font-family: "Cocon";
     -fx-prompt-text-fill: #757575;
 }
+
+.label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 36px;
+}

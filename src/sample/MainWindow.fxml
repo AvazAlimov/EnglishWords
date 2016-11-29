@@ -12,6 +12,7 @@
     </rowConstraints>
     <Button fx:id="startGame" alignment="CENTER" text="Button" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
     <Button fx:id="settings" onAction="#openSettings" alignment="CENTER" text="Button" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+
     <stylesheets>
         <URL value="@Style.css"/>
     </stylesheets>

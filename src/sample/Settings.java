@@ -28,7 +28,7 @@ public class Settings implements Initializable {
         back.setText("Back");
     }
 
-    public void backToMenu(ActionEvent event) throws IOException {
+    public void doAction(ActionEvent event) throws IOException {
         Parent parent = null;
         switch (((Control) event.getSource()).getId()) {
             case "backButton":
