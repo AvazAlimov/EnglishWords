@@ -40,7 +40,7 @@ public class AddWord implements Initializable {
         stage.show();
     }
 
-    public void addWord() {
+    public void addWord(ActionEvent event) {
         String name = this.name.getText();
         String meaning = this.meaning.getText();
 
@@ -55,7 +55,8 @@ public class AddWord implements Initializable {
 
         LocalDateTime date = LocalDateTime.now();
         Date myDate = new Date(date.getDayOfMonth() + "/" + date.getMonthValue() + "/" + date.getYear());
-        System.out.println(name + "\n" + meaning + "\n" + myDate.toString());
+        Main.words.add(new Word(name,meaning,myDate));
+        cancel.getOnAction().handle(event);
     }
 
     public void textChanged(KeyEvent inputMethodEvent) {

@@ -14,7 +14,7 @@ public class Word {
                 delim.add(i);
         setName(args.substring(0, delim.get(0)));
         setMeaning(args.substring(delim.get(0) + 1, delim.get(1)));
-        setEnteredDate(new Date(args.substring(delim.get(1) + 1, delim.get(2))));
+        setEnteredDate(new Date(args.substring(delim.get(1) + 1, args.length())));
     }
 
     public Word(String name, String meaning, Date enteredDate) {
@@ -48,6 +48,6 @@ public class Word {
     }
 
     public String toString() {
-        return name + "■" + meaning + "■" + enteredDate;
+        return name + "■" + meaning + "■" + enteredDate + "\n";
     }
 }

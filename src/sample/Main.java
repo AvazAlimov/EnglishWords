@@ -27,6 +27,12 @@ public class Main extends Application {
         primaryStage.show();
     }
 
+    @Override
+    public void stop() throws Exception {
+        writeFile();
+        super.stop();
+    }
+
     public static void main(String[] args) {
         words = new ArrayList<>();
         try {
