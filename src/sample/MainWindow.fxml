@@ -5,13 +5,16 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 <?import java.net.URL?>
-<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="CENTER" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.76-ea"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <rowConstraints>
-        <RowConstraints />
-        <RowConstraints />
+        <RowConstraints/>
+        <RowConstraints/>
     </rowConstraints>
-    <Button fx:id="startGame" alignment="CENTER" text="Button" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-    <Button fx:id="settings" onAction="#openSettings" alignment="CENTER" text="Button" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+    <Button fx:id="startGame" id="game" onAction="#openSettings" alignment="CENTER" text="Button"
+            GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+    <Button fx:id="settings" id="settings" onAction="#openSettings" alignment="CENTER" text="Button"
+            GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER"/>
 
     <stylesheets>
         <URL value="@Style.css"/>
