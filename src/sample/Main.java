@@ -46,7 +46,7 @@ public class Main extends Application {
         launch(args);
     }
 
-    public static void writeFile() throws IOException {
+    private static void writeFile() throws IOException {
         FileWriter fileWriter = new FileWriter("words.txt", false);
         for (Word word : words)
             fileWriter.write(word.toString());
@@ -54,7 +54,7 @@ public class Main extends Application {
         fileWriter.close();
     }
 
-    public static void readFile() throws IOException {
+    private static void readFile() throws IOException {
         File file = new File("words.txt");
         FileInputStream fis = new FileInputStream(file);
         byte[] data = new byte[(int) file.length()];
@@ -66,11 +66,11 @@ public class Main extends Application {
             return;
 
         int lineIndex = 0;
-        for (int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++)
             if (str.charAt(i) == '\n') {
                 Word word = new Word(str.substring(lineIndex, i));
                 words.add(word);
+                lineIndex = i + 1;
             }
-        }
     }
 }

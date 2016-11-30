@@ -14,6 +14,7 @@
         <RowConstraints/>
         <RowConstraints/>
         <RowConstraints/>
+        <RowConstraints/>
     </rowConstraints>
 
     <Label fx:id="word" GridPane.halignment="CENTER"/>
@@ -29,6 +30,8 @@
         <Separator prefWidth="20" visible="false"/>
         <Button fx:id="fourAnswer"/>
     </HBox>
+
+    <Button fx:id="backButton" onAction="#backToMenu" GridPane.rowIndex="3" GridPane.halignment="CENTER"/>
 
     <stylesheets>
         <URL value="@Style.css"/>
