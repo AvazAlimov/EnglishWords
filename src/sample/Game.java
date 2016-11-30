@@ -19,24 +19,23 @@ import java.util.ResourceBundle;
 
 @SuppressWarnings("ALL")
 public class Game implements Initializable {
-
     public Label word;
     public Button oneAnswer;
     public Button twoAnswer;
     public Button threeAnswer;
     public Button fourAnswer;
     public Button backButton;
+    public Button nextButton;
     private List<Button> answers;
+    private Word currentWord;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        word.setText("Word Game");
-        backButton.setText("Back");
         answers = new ArrayList<>();
-        answers.add(oneAnswer);
-        answers.add(twoAnswer);
-        answers.add(threeAnswer);
-        answers.add(fourAnswer);
+        backButton.setText("Menu");
+        nextButton.setText("Next");
+        backButton.setStyle("-fx-background-color: #ff6f00;");
+        nextButton.setStyle("-fx-background-color: #ff6f00;");
         generateTest();
     }
 
@@ -50,12 +49,17 @@ public class Game implements Initializable {
     }
 
     private void generateTest() {
+        answers.add(oneAnswer);
+        answers.add(twoAnswer);
+        answers.add(threeAnswer);
+        answers.add(fourAnswer);
         Word[] questions = new Word[4];
         List<Word> words = shuffleWords((List<Word>) Main.words.clone());
         for (int i = 0; i < 4; i++)
             questions[i] = words.get(i);
 
         word.setText(questions[0].getName());
+        currentWord = questions[0];
         List<Button> answers = shuffle(this.answers);
         for (int i = 0; i < 4; i++)
             answers.get(i).setText(questions[i].getMeaning());
@@ -81,5 +85,23 @@ public class Game implements Initializable {
             strings.remove(index);
         }
         return teams;
+    }
+
+    public void checkAnswer(ActionEvent event) {
+        Button btn = (Button) event.getSource();
+        if (btn.getText().equals(currentWord.getMeaning()))
+            btn.setStyle("-fx-background-color: #4caf50;");
+        else {
+            btn.setStyle("-fx-background-color: #f44336;");
+            answers.stream().filter(answer -> answer.getText().equals(currentWord.getMeaning())).forEach(answer -> btn.setStyle("-fx-background-color: #4caf50;"));
+        }
+    }
+
+    public void nextWord() {
+        oneAnswer.setStyle("-fx-background-color: #ffc107;");
+        twoAnswer.setStyle("-fx-background-color: #ffc107;");
+        threeAnswer.setStyle("-fx-background-color: #ffc107;");
+        fourAnswer.setStyle("-fx-background-color: #ffc107;");
+        generateTest();
     }
 }

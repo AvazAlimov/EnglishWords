@@ -12,26 +12,32 @@
           xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Game">
     <rowConstraints>
         <RowConstraints/>
+        <RowConstraints prefHeight="30"/>
         <RowConstraints/>
         <RowConstraints/>
+        <RowConstraints prefHeight="30"/>
         <RowConstraints/>
     </rowConstraints>
 
     <Label fx:id="word" GridPane.halignment="CENTER"/>
 
-    <HBox GridPane.rowIndex="1">
-        <Button fx:id="oneAnswer"/>
-        <Separator prefWidth="20" visible="false"/>
-        <Button fx:id="twoAnswer"/>
-    </HBox>
-
     <HBox GridPane.rowIndex="2">
-        <Button fx:id="threeAnswer"/>
+        <Button fx:id="oneAnswer" onAction="#checkAnswer"/>
         <Separator prefWidth="20" visible="false"/>
-        <Button fx:id="fourAnswer"/>
+        <Button fx:id="twoAnswer" onAction="#checkAnswer"/>
     </HBox>
 
-    <Button fx:id="backButton" onAction="#backToMenu" GridPane.rowIndex="3" GridPane.halignment="CENTER"/>
+    <HBox GridPane.rowIndex="3">
+        <Button fx:id="threeAnswer" onAction="#checkAnswer"/>
+        <Separator prefWidth="20" visible="false"/>
+        <Button fx:id="fourAnswer" onAction="#checkAnswer"/>
+    </HBox>
+
+    <HBox GridPane.rowIndex="5">
+        <Button fx:id="backButton" onAction="#backToMenu" GridPane.rowIndex="3" GridPane.halignment="CENTER"/>
+        <Separator prefWidth="20" visible="false"/>
+        <Button fx:id="nextButton" onAction="#nextWord" GridPane.rowIndex="3" GridPane.halignment="CENTER"/>
+    </HBox>
 
     <stylesheets>
         <URL value="@Style.css"/>
