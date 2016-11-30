@@ -55,13 +55,8 @@ public class Game implements Initializable {
 
     private void generateTest() {
         Word[] questions = new Word[4];
-
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++)
             questions[i] = Main.words.get(new Random().nextInt(Main.words.size()));
-            for (int j = 0; j <= i; j++) {
-
-            }
-        }
 
         word.setText(questions[0].getName());
         List<Button> answers = shuffle(this.answers);
