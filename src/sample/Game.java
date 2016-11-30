@@ -32,10 +32,16 @@ public class Game implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         answers = new ArrayList<>();
+
+        oneAnswer.setStyle("-fx-font-size: 24px;");
+        twoAnswer.setStyle("-fx-font-size: 24px;");
+        threeAnswer.setStyle("-fx-font-size: 24px;");
+        fourAnswer.setStyle("-fx-font-size: 24px;");
         backButton.setText("Menu");
         nextButton.setText("Next");
         backButton.setStyle("-fx-background-color: #ff6f00;");
         nextButton.setStyle("-fx-background-color: #ff6f00;");
+
         generateTest();
     }
 
@@ -93,7 +99,7 @@ public class Game implements Initializable {
             btn.setStyle("-fx-background-color: #4caf50;");
         else {
             btn.setStyle("-fx-background-color: #f44336;");
-            answers.stream().filter(answer -> answer.getText().equals(currentWord.getMeaning())).forEach(answer -> btn.setStyle("-fx-background-color: #4caf50;"));
+            findAnswer();
         }
     }
 
@@ -103,5 +109,15 @@ public class Game implements Initializable {
         threeAnswer.setStyle("-fx-background-color: #ffc107;");
         fourAnswer.setStyle("-fx-background-color: #ffc107;");
         generateTest();
+    }
+
+    private void findAnswer() {
+        List<Button> buttons = new ArrayList<>();
+        buttons.add(oneAnswer);
+        buttons.add(twoAnswer);
+        buttons.add(threeAnswer);
+        buttons.add(fourAnswer);
+
+        buttons.stream().filter(button -> button.getText().equals(currentWord.getMeaning())).forEachOrdered(button -> button.setStyle("-fx-background-color: #4caf50;"));
     }
 }
