@@ -7,7 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
@@ -18,6 +17,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 
+@SuppressWarnings("ALL")
 public class Game implements Initializable {
 
     public Label word;
@@ -31,10 +31,6 @@ public class Game implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         word.setText("Word Game");
-        oneAnswer.setText("A");
-        twoAnswer.setText("B");
-        threeAnswer.setText("C");
-        fourAnswer.setText("D");
         backButton.setText("Back");
         answers = new ArrayList<>();
         answers.add(oneAnswer);
@@ -55,8 +51,9 @@ public class Game implements Initializable {
 
     private void generateTest() {
         Word[] questions = new Word[4];
+        List<Word> words = shuffleWords(Main.words);
         for (int i = 0; i < 4; i++)
-            questions[i] = Main.words.get(new Random().nextInt(Main.words.size()));
+            questions[i] = words.get(i);
 
         word.setText(questions[0].getName());
         List<Button> answers = shuffle(this.answers);
@@ -66,6 +63,17 @@ public class Game implements Initializable {
 
     private static List<Button> shuffle(List<Button> strings) {
         List<Button> teams = new ArrayList<>();
+        while (strings.size() != 0) {
+            Random random = new Random();
+            int index = Math.abs(random.nextInt() % strings.size());
+            teams.add(strings.get(index));
+            strings.remove(index);
+        }
+        return teams;
+    }
+
+    private static List<Word> shuffleWords(List<Word> strings) {
+        List<Word> teams = new ArrayList<>();
         while (strings.size() != 0) {
             Random random = new Random();
             int index = Math.abs(random.nextInt() % strings.size());
