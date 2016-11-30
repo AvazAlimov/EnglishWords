@@ -51,7 +51,7 @@ public class Game implements Initializable {
 
     private void generateTest() {
         Word[] questions = new Word[4];
-        List<Word> words = shuffleWords(Main.words);
+        List<Word> words = shuffleWords((List<Word>) Main.words.clone());
         for (int i = 0; i < 4; i++)
             questions[i] = words.get(i);
 
