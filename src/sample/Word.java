@@ -1,21 +1,9 @@
 package sample;
 
-import java.util.ArrayList;
-
 public class Word {
     private String name;
     private String meaning;
     private Date enteredDate;
-
-    public Word(String args) {
-        ArrayList<Integer> delim = new ArrayList<>();
-        for (int i = 0; i < args.length(); i++)
-            if (args.charAt(i) == '■')
-                delim.add(i);
-        setName(args.substring(0, delim.get(0)));
-        setMeaning(args.substring(delim.get(0) + 1, delim.get(1)));
-        setEnteredDate(new Date(args.substring(delim.get(1) + 1, args.length())));
-    }
 
     public Word(String name, String meaning, Date enteredDate) {
         this.name = name;
@@ -48,6 +36,6 @@ public class Word {
     }
 
     public String toString() {
-        return name + "■" + meaning + "■" + enteredDate + "\n";
+        return name + "\t" + meaning + "\t" + enteredDate;
     }
 }

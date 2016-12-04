@@ -38,8 +38,10 @@ public class Settings implements Initializable {
                 parent = FXMLLoader.load(getClass().getResource("AddWordWindow.fxml"));
                 break;
             case "deleteWordButton":
+                parent = FXMLLoader.load(getClass().getResource("DeleteWord.fxml"));
                 break;
             case "editWordButton":
+                parent = FXMLLoader.load(getClass().getResource("EditWord.fxml"));
                 break;
             default:
                 break;

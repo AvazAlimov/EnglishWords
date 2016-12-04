@@ -31,8 +31,12 @@
     -fx-prompt-text-fill: #757575;
 }
 
-.text-field:focused{
+.text-field:focused {
     -fx-effect: dropshadow(two-pass-box, #424242, 10, 0.2, 0, 2);
+}
+
+.text-field:disabled{
+    -fx-opacity: 1.0;
 }
 
 .label {
@@ -42,4 +46,14 @@
     -fx-font-weight: bold;
     -fx-font-size: 56px;
     -fx-alignment: center;
+}
+
+#messageLabel{
+    -fx-font-size: 20;
+    -fx-text-fill: #f40;
+}
+
+#messageLabel:hover{
+    -fx-text-fill: red;
+    -fx-cursor: hand;
 }

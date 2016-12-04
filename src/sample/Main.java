@@ -7,12 +7,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.sql.*;
 import java.util.ArrayList;
 
+@SuppressWarnings("duplicate")
 public class Main extends Application {
     public static ArrayList<Word> words;
 
@@ -27,50 +25,99 @@ public class Main extends Application {
         primaryStage.show();
     }
 
-    @Override
-    public void stop() throws Exception {
-        writeFile();
-        super.stop();
-    }
-
     public static void main(String[] args) {
         words = new ArrayList<>();
-        try {
-            readFile();
-        } catch (IOException e) {
-            try {
-                writeFile();
-            } catch (IOException ignored) {
-            }
-        }
+        SQLiteConnection.init();
+
+        for (Word word : words)
+            System.out.println(word.toString());
+
         launch(args);
     }
+}
 
-    private static void writeFile() throws IOException {
-        FileWriter fileWriter = new FileWriter("words.txt", false);
-        for (Word word : words)
-            fileWriter.write(word.toString());
-        fileWriter.flush();
-        fileWriter.close();
+class SQLiteConnection {
+    private static String path = "jdbc:sqlite:database.db";
+    private static Connection connection = null;
+
+    public static void init() {
+        try {
+            connection = DriverManager.getConnection(path);
+            Statement statement = connection.createStatement();
+            String query = "CREATE TABLE IF NOT EXISTS Words(word VARCHAR(50) PRIMARY KEY, meaning VARCHAR(300), date VARCHAR(10));";
+            statement.executeUpdate(query);
+            query = "SELECT * FROM Words;";
+            ResultSet result = statement.executeQuery(query);
+
+            while (result.next())
+                Main.words.add(new Word(result.getString("word"), result.getString("meaning"), new Date(result.getString("date"))));
+
+            if (connection != null)
+                connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
-    private static void readFile() throws IOException {
-        File file = new File("words.txt");
-        FileInputStream fis = new FileInputStream(file);
-        byte[] data = new byte[(int) file.length()];
-        fis.read(data);
-        fis.close();
-        String str = new String(data, "UTF-8");
+    public static void show() {
+        Connection connection;
+        java.sql.Statement statement;
 
-        if (str.length() == 0)
-            return;
+        try {
+            Class.forName("org.sqlite.JDBC");
+            connection = DriverManager.getConnection(path);
+            connection.setAutoCommit(false);
 
-        int lineIndex = 0;
-        for (int i = 0; i < str.length(); i++)
-            if (str.charAt(i) == '\n') {
-                Word word = new Word(str.substring(lineIndex, i));
-                words.add(word);
-                lineIndex = i + 1;
+            statement = connection.createStatement();
+            String query = "SELECT * FROM Words;";
+            ResultSet result = statement.executeQuery(query);
+            while (result.next()) {
+                System.out.println(result.getString("word") + "\t" + result.getString("meaning") + "\t" + result.getString("date"));
             }
+            statement.close();
+            connection.commit();
+            connection.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addWord(String word, String meaning, String date) {
+        try {
+            connection = DriverManager.getConnection(path);
+            Statement statement = connection.createStatement();
+            String query = String.format("INSERT INTO Words(word,meaning,date) VALUES ('%s','%s','%s');", word, meaning, date);
+            statement.executeUpdate(query);
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteWord(String word) {
+        try {
+            connection = DriverManager.getConnection(path);
+            Statement statement = connection.createStatement();
+            String query = String.format("DELETE FROM Words WHERE word='%s';", word);
+            statement.executeUpdate(query);
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void updateWord(String word, String changedWord, String meaning) {
+        try {
+            connection = DriverManager.getConnection(path);
+            Statement statement = connection.createStatement();
+            String query = String.format("UPDATE Words SET word='%s', meaning='%s' WHERE word='%s';", changedWord, meaning, word);
+            statement.executeUpdate(query);
+            statement.close();
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
