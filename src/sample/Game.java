@@ -33,15 +33,6 @@ public class Game implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         answers = new ArrayList<>();
 
-        oneAnswer.setStyle("-fx-font-size: 24px;");
-        twoAnswer.setStyle("-fx-font-size: 24px;");
-        threeAnswer.setStyle("-fx-font-size: 24px;");
-        fourAnswer.setStyle("-fx-font-size: 24px;");
-        backButton.setText("Menu");
-        nextButton.setText("Next");
-        backButton.setStyle("-fx-background-color: #ff6f00;");
-        nextButton.setStyle("-fx-background-color: #ff6f00;");
-
         generateTest();
     }
 
@@ -96,18 +87,18 @@ public class Game implements Initializable {
     public void checkAnswer(ActionEvent event) {
         Button btn = (Button) event.getSource();
         if (btn.getText().equals(currentWord.getMeaning()))
-            btn.setStyle("-fx-background-color: #4caf50;");
+            btn.setStyle("-fx-background-color: #4caf50; -fx-font-size: 14;");
         else {
-            btn.setStyle("-fx-background-color: #f44336;");
+            btn.setStyle("-fx-background-color: #f44336; -fx-font-size: 14;");
             findAnswer();
         }
     }
 
     public void nextWord() {
-        oneAnswer.setStyle("-fx-background-color: #ffc107;");
-        twoAnswer.setStyle("-fx-background-color: #ffc107;");
-        threeAnswer.setStyle("-fx-background-color: #ffc107;");
-        fourAnswer.setStyle("-fx-background-color: #ffc107;");
+        oneAnswer.setStyle("-fx-background-color: #ffc107; -fx-font-size: 14;");
+        twoAnswer.setStyle("-fx-background-color: #ffc107; -fx-font-size: 14;");
+        threeAnswer.setStyle("-fx-background-color: #ffc107; -fx-font-size: 14;");
+        fourAnswer.setStyle("-fx-background-color: #ffc107; -fx-font-size: 14;");
         generateTest();
     }
 
@@ -118,6 +109,6 @@ public class Game implements Initializable {
         buttons.add(threeAnswer);
         buttons.add(fourAnswer);
 
-        buttons.stream().filter(button -> button.getText().equals(currentWord.getMeaning())).forEachOrdered(button -> button.setStyle("-fx-background-color: #4caf50;"));
+        buttons.stream().filter(button -> button.getText().equals(currentWord.getMeaning())).forEachOrdered(button -> button.setStyle("-fx-background-color: #4caf50; -fx-font-size: 14;"));
     }
 }

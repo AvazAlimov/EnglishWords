@@ -22,21 +22,23 @@
     <Label fx:id="word" GridPane.halignment="CENTER"/>
 
     <HBox GridPane.rowIndex="2">
-        <Button fx:id="oneAnswer" onAction="#checkAnswer"/>
+        <Button fx:id="oneAnswer" style="-fx-font-size: 14;" onAction="#checkAnswer"/>
         <Separator prefWidth="20" visible="false"/>
-        <Button fx:id="twoAnswer" onAction="#checkAnswer"/>
+        <Button fx:id="twoAnswer" style="-fx-font-size: 14;" onAction="#checkAnswer"/>
     </HBox>
 
     <HBox GridPane.rowIndex="3">
-        <Button fx:id="threeAnswer" onAction="#checkAnswer"/>
+        <Button fx:id="threeAnswer" style="-fx-font-size: 14;" onAction="#checkAnswer"/>
         <Separator prefWidth="20" visible="false"/>
-        <Button fx:id="fourAnswer" onAction="#checkAnswer"/>
+        <Button fx:id="fourAnswer" style="-fx-font-size: 14;" onAction="#checkAnswer"/>
     </HBox>
 
     <HBox GridPane.rowIndex="5">
-        <Button fx:id="backButton" onAction="#backToMenu" GridPane.rowIndex="3" GridPane.halignment="CENTER"/>
+        <Button fx:id="backButton" text="Menu" style="-fx-background-color: #ff6f00;" onAction="#backToMenu" GridPane.rowIndex="3"
+                GridPane.halignment="CENTER"/>
         <Separator prefWidth="20" visible="false"/>
-        <Button fx:id="nextButton" onAction="#nextWord" GridPane.rowIndex="3" GridPane.halignment="CENTER"/>
+        <Button fx:id="nextButton" text="Next" style="-fx-background-color: #ff6f00;" onAction="#nextWord" GridPane.rowIndex="3"
+                GridPane.halignment="CENTER"/>
     </HBox>
 
     <stylesheets>

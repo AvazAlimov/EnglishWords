@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a793bd8-b56c-45d8-9b23-af448516012b" name="Default" comment="">
+    <list default="true" id="3a793bd8-b56c-45d8-9b23-af448516012b" name="Default" comment="Finally, I finished it.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.db" afterPath="$PROJECT_DIR$/database.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AddWord.java" afterPath="$PROJECT_DIR$/src/sample/AddWord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/DeleteWord.java" afterPath="$PROJECT_DIR$/src/sample/DeleteWord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/EditWord.java" afterPath="$PROJECT_DIR$/src/sample/EditWord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Game.java" afterPath="$PROJECT_DIR$/src/sample/Game.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/GameWindow.fxml" afterPath="$PROJECT_DIR$/src/sample/GameWindow.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -44,7 +44,45 @@
     <favorites_list name="EnglishWords" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf>
+      <file leaf-file-name="MainWindow.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/MainWindow.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="18" column="93" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#251#275#0" expanded="true" />
+                <element signature="method#start#0;class#Main#0" expanded="false" />
+                <element signature="method#main#0;class#Main#0" expanded="false" />
+                <element signature="e#934#958#1" expanded="true" />
+                <element signature="method#show#0;class#SQLiteConnection#0" expanded="false" />
+                <element signature="method#addWord#0;class#SQLiteConnection#0" expanded="false" />
+                <element signature="method#deleteWord#0;class#SQLiteConnection#0" expanded="false" />
+                <element signature="method#updateWord#0;class#SQLiteConnection#0" expanded="false" />
+                <marker date="1480851581773" expanded="true" signature="1292:1394" ph="CREATE TABLE... IF" />
+                <marker date="1480851581773" expanded="true" signature="1463:1482" ph="SELECT * FRO... Words" />
+                <marker date="1480851581773" expanded="true" signature="2224:2238" ph="SELECT * FRO... company" />
+                <marker date="1480851581773" expanded="true" signature="2224:2243" ph="SELECT * FRO... Words" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,14 +102,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/Game.java" />
         <option value="$PROJECT_DIR$/words.txt" />
-        <option value="$PROJECT_DIR$/src/sample/GameWindow.fxml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/f882a2fb-50a4-4b41-9395-d825d38fb65f/console.sql" />
         <option value="$PROJECT_DIR$/src/sample/AddWordWindow.fxml" />
         <option value="$PROJECT_DIR$/src/sample/MainWindow.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Date.java" />
         <option value="$PROJECT_DIR$/src/sample/Word.java" />
         <option value="$PROJECT_DIR$/src/sample/Style.css" />
@@ -81,6 +116,9 @@
         <option value="$PROJECT_DIR$/src/sample/AddWord.java" />
         <option value="$PROJECT_DIR$/src/sample/EditWord.java" />
         <option value="$PROJECT_DIR$/src/sample/DeleteWord.java" />
+        <option value="$PROJECT_DIR$/src/sample/GameWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Game.java" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
       </list>
     </option>
   </component>
@@ -177,6 +215,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -215,9 +256,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -700,7 +738,8 @@
       <workItem from="1480500108082" duration="9856000" />
       <workItem from="1480658658503" duration="25000" />
       <workItem from="1480782849636" duration="3730000" />
-      <workItem from="1480838170249" duration="9759000" />
+      <workItem from="1480838170249" duration="10105000" />
+      <workItem from="1480850622442" duration="958000" />
     </task>
     <task id="LOCAL-00001" summary="Avaz commited">
       <created>1480430038499</created>
@@ -772,30 +811,36 @@
       <option name="project" value="LOCAL" />
       <updated>1480848403753</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Avaz commited">
+      <created>1480848742020</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1480848742020</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40558000" />
+    <option name="totallyTimeSpent" value="41862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821077" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18489583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18489583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -808,6 +853,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -824,7 +870,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Avaz commited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avaz commited" />
+    <MESSAGE value="Finally, I finished it." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finally, I finished it." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -843,19 +890,18 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#251#281#0" expanded="true" />
+            <element signature="e#251#275#0" expanded="true" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#SQLiteConnection#0" expanded="false" />
-            <element signature="method#init#0;class#SQLiteConnection#0" expanded="false" />
+            <element signature="e#934#958#1" expanded="true" />
             <element signature="method#show#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#addWord#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#deleteWord#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#updateWord#0;class#SQLiteConnection#0" expanded="false" />
-            <marker date="1480840004102" expanded="true" signature="1356:1458" ph="CREATE TABLE... IF" />
-            <marker date="1480840004102" expanded="true" signature="1527:1546" ph="SELECT * FRO... Words" />
-            <marker date="1480840004102" expanded="true" signature="2288:2302" ph="SELECT * FRO... company" />
-            <marker date="1480840004102" expanded="true" signature="2288:2307" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="1292:1394" ph="CREATE TABLE... IF" />
+            <marker date="1480851581773" expanded="true" signature="1463:1482" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="2224:2238" ph="SELECT * FRO... company" />
+            <marker date="1480851581773" expanded="true" signature="2224:2243" ph="SELECT * FRO... Words" />
           </folding>
         </state>
       </provider>
@@ -864,7 +910,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -872,7 +917,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#searchWords#0;class#EditWord#0" expanded="false" />
+            <element signature="method#textChanged#0;class#EditWord#0" expanded="false" />
+            <element signature="method#cancelEditing#0;class#EditWord#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -899,7 +948,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#searchWords#0;class#EditWord#0" expanded="false" />
+            <element signature="method#textChanged#0;class#EditWord#0" expanded="false" />
+            <element signature="method#cancelEditing#0;class#EditWord#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -938,13 +991,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#backToMenu#0;class#Game#0" expanded="false" />
             <element signature="method#generateTest#0;class#Game#0" expanded="false" />
             <element signature="method#shuffle#0;class#Game#0" expanded="false" />
             <element signature="method#shuffleWords#0;class#Game#0" expanded="false" />
             <element signature="method#checkAnswer#0;class#Game#0" expanded="false" />
-            <element signature="method#nextWord#0;class#Game#0" expanded="false" />
             <element signature="method#findAnswer#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -956,19 +1007,18 @@
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#251#281#0" expanded="true" />
+            <element signature="e#251#275#0" expanded="true" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#SQLiteConnection#0" expanded="false" />
-            <element signature="method#init#0;class#SQLiteConnection#0" expanded="false" />
+            <element signature="e#934#958#1" expanded="true" />
             <element signature="method#show#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#addWord#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#deleteWord#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#updateWord#0;class#SQLiteConnection#0" expanded="false" />
-            <marker date="1480840004102" expanded="true" signature="1356:1458" ph="CREATE TABLE... IF" />
-            <marker date="1480840004102" expanded="true" signature="1527:1546" ph="SELECT * FRO... Words" />
-            <marker date="1480840004102" expanded="true" signature="2288:2302" ph="SELECT * FRO... company" />
-            <marker date="1480840004102" expanded="true" signature="2288:2307" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="1292:1394" ph="CREATE TABLE... IF" />
+            <marker date="1480851581773" expanded="true" signature="1463:1482" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="2224:2238" ph="SELECT * FRO... company" />
+            <marker date="1480851581773" expanded="true" signature="2224:2243" ph="SELECT * FRO... Words" />
           </folding>
         </state>
       </provider>
@@ -1008,13 +1058,11 @@
         <state relative-caret-position="220">
           <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#backToMenu#0;class#Game#0" expanded="false" />
             <element signature="method#generateTest#0;class#Game#0" expanded="false" />
             <element signature="method#shuffle#0;class#Game#0" expanded="false" />
             <element signature="method#shuffleWords#0;class#Game#0" expanded="false" />
             <element signature="method#checkAnswer#0;class#Game#0" expanded="false" />
-            <element signature="method#nextWord#0;class#Game#0" expanded="false" />
             <element signature="method#findAnswer#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -1026,19 +1074,18 @@
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#251#281#0" expanded="true" />
+            <element signature="e#251#275#0" expanded="true" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#SQLiteConnection#0" expanded="false" />
-            <element signature="method#init#0;class#SQLiteConnection#0" expanded="false" />
+            <element signature="e#934#958#1" expanded="true" />
             <element signature="method#show#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#addWord#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#deleteWord#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#updateWord#0;class#SQLiteConnection#0" expanded="false" />
-            <marker date="1480840004102" expanded="true" signature="1356:1458" ph="CREATE TABLE... IF" />
-            <marker date="1480840004102" expanded="true" signature="1527:1546" ph="SELECT * FRO... Words" />
-            <marker date="1480840004102" expanded="true" signature="2288:2302" ph="SELECT * FRO... company" />
-            <marker date="1480840004102" expanded="true" signature="2288:2307" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="1292:1394" ph="CREATE TABLE... IF" />
+            <marker date="1480851581773" expanded="true" signature="1463:1482" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="2224:2238" ph="SELECT * FRO... company" />
+            <marker date="1480851581773" expanded="true" signature="2224:2243" ph="SELECT * FRO... Words" />
           </folding>
         </state>
       </provider>
@@ -1078,13 +1125,11 @@
         <state relative-caret-position="220">
           <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#backToMenu#0;class#Game#0" expanded="false" />
             <element signature="method#generateTest#0;class#Game#0" expanded="false" />
             <element signature="method#shuffle#0;class#Game#0" expanded="false" />
             <element signature="method#shuffleWords#0;class#Game#0" expanded="false" />
             <element signature="method#checkAnswer#0;class#Game#0" expanded="false" />
-            <element signature="method#nextWord#0;class#Game#0" expanded="false" />
             <element signature="method#findAnswer#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -1096,19 +1141,18 @@
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#251#281#0" expanded="true" />
+            <element signature="e#251#275#0" expanded="true" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#SQLiteConnection#0" expanded="false" />
-            <element signature="method#init#0;class#SQLiteConnection#0" expanded="false" />
+            <element signature="e#934#958#1" expanded="true" />
             <element signature="method#show#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#addWord#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#deleteWord#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#updateWord#0;class#SQLiteConnection#0" expanded="false" />
-            <marker date="1480840004102" expanded="true" signature="1356:1458" ph="CREATE TABLE... IF" />
-            <marker date="1480840004102" expanded="true" signature="1527:1546" ph="SELECT * FRO... Words" />
-            <marker date="1480840004102" expanded="true" signature="2288:2302" ph="SELECT * FRO... company" />
-            <marker date="1480840004102" expanded="true" signature="2288:2307" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="1292:1394" ph="CREATE TABLE... IF" />
+            <marker date="1480851581773" expanded="true" signature="1463:1482" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="2224:2238" ph="SELECT * FRO... company" />
+            <marker date="1480851581773" expanded="true" signature="2224:2243" ph="SELECT * FRO... Words" />
           </folding>
         </state>
       </provider>
@@ -1148,13 +1192,11 @@
         <state relative-caret-position="220">
           <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#backToMenu#0;class#Game#0" expanded="false" />
             <element signature="method#generateTest#0;class#Game#0" expanded="false" />
             <element signature="method#shuffle#0;class#Game#0" expanded="false" />
             <element signature="method#shuffleWords#0;class#Game#0" expanded="false" />
             <element signature="method#checkAnswer#0;class#Game#0" expanded="false" />
-            <element signature="method#nextWord#0;class#Game#0" expanded="false" />
             <element signature="method#findAnswer#0;class#Game#0" expanded="false" />
           </folding>
         </state>
@@ -1177,19 +1219,18 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#251#281#0" expanded="true" />
+            <element signature="e#251#275#0" expanded="true" />
             <element signature="method#start#0;class#Main#0" expanded="false" />
             <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#SQLiteConnection#0" expanded="false" />
-            <element signature="method#init#0;class#SQLiteConnection#0" expanded="false" />
+            <element signature="e#934#958#1" expanded="true" />
             <element signature="method#show#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#addWord#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#deleteWord#0;class#SQLiteConnection#0" expanded="false" />
             <element signature="method#updateWord#0;class#SQLiteConnection#0" expanded="false" />
-            <marker date="1480840004102" expanded="true" signature="1356:1458" ph="CREATE TABLE... IF" />
-            <marker date="1480840004102" expanded="true" signature="1527:1546" ph="SELECT * FRO... Words" />
-            <marker date="1480840004102" expanded="true" signature="2288:2302" ph="SELECT * FRO... company" />
-            <marker date="1480840004102" expanded="true" signature="2288:2307" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="1292:1394" ph="CREATE TABLE... IF" />
+            <marker date="1480851581773" expanded="true" signature="1463:1482" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="2224:2238" ph="SELECT * FRO... company" />
+            <marker date="1480851581773" expanded="true" signature="2224:2243" ph="SELECT * FRO... Words" />
           </folding>
         </state>
       </provider>
@@ -1214,34 +1255,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/GameWindow.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#backToMenu#0;class#Game#0" expanded="false" />
-            <element signature="method#generateTest#0;class#Game#0" expanded="false" />
-            <element signature="method#shuffle#0;class#Game#0" expanded="false" />
-            <element signature="method#shuffleWords#0;class#Game#0" expanded="false" />
-            <element signature="method#checkAnswer#0;class#Game#0" expanded="false" />
-            <element signature="method#nextWord#0;class#Game#0" expanded="false" />
-            <element signature="method#findAnswer#0;class#Game#0" expanded="false" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="uml://JAVA/sample.Settings">
@@ -1275,7 +1288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1283,58 +1295,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/words.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/MainWindow.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="62" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/words.txt" />
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
           <folding>
             <element signature="method#openAddWindow#0;class#Controller#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#251#281#0" expanded="true" />
-            <element signature="method#start#0;class#Main#0" expanded="false" />
-            <element signature="method#main#0;class#Main#0" expanded="false" />
-            <element signature="class#SQLiteConnection#0" expanded="false" />
-            <element signature="method#init#0;class#SQLiteConnection#0" expanded="false" />
-            <element signature="method#show#0;class#SQLiteConnection#0" expanded="false" />
-            <element signature="method#addWord#0;class#SQLiteConnection#0" expanded="false" />
-            <element signature="method#deleteWord#0;class#SQLiteConnection#0" expanded="false" />
-            <element signature="method#updateWord#0;class#SQLiteConnection#0" expanded="false" />
-            <marker date="1480840004102" expanded="true" signature="1356:1458" ph="CREATE TABLE... IF" />
-            <marker date="1480840004102" expanded="true" signature="1527:1546" ph="SELECT * FRO... Words" />
-            <marker date="1480840004102" expanded="true" signature="2288:2302" ph="SELECT * FRO... company" />
-            <marker date="1480840004102" expanded="true" signature="2288:2307" ph="SELECT * FRO... Words" />
           </folding>
         </state>
       </provider>
@@ -1371,14 +1341,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/EditWord.fxml">
@@ -1442,6 +1404,73 @@
             <element signature="method#searchWords#0;class#EditWord#0" expanded="false" />
             <element signature="method#textChanged#0;class#EditWord#0" expanded="false" />
             <element signature="method#cancelEditing#0;class#EditWord#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="method#backToMenu#0;class#Game#0" expanded="false" />
+            <element signature="method#generateTest#0;class#Game#0" expanded="false" />
+            <element signature="method#shuffle#0;class#Game#0" expanded="false" />
+            <element signature="method#shuffleWords#0;class#Game#0" expanded="false" />
+            <element signature="method#checkAnswer#0;class#Game#0" expanded="false" />
+            <element signature="method#findAnswer#0;class#Game#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/GameWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="40" column="46" selection-start-line="40" selection-start-column="46" selection-end-line="40" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/MainWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="93" selection-start-line="18" selection-start-column="93" selection-end-line="18" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#251#275#0" expanded="true" />
+            <element signature="method#start#0;class#Main#0" expanded="false" />
+            <element signature="method#main#0;class#Main#0" expanded="false" />
+            <element signature="e#934#958#1" expanded="true" />
+            <element signature="method#show#0;class#SQLiteConnection#0" expanded="false" />
+            <element signature="method#addWord#0;class#SQLiteConnection#0" expanded="false" />
+            <element signature="method#deleteWord#0;class#SQLiteConnection#0" expanded="false" />
+            <element signature="method#updateWord#0;class#SQLiteConnection#0" expanded="false" />
+            <marker date="1480851581773" expanded="true" signature="1292:1394" ph="CREATE TABLE... IF" />
+            <marker date="1480851581773" expanded="true" signature="1463:1482" ph="SELECT * FRO... Words" />
+            <marker date="1480851581773" expanded="true" signature="2224:2238" ph="SELECT * FRO... company" />
+            <marker date="1480851581773" expanded="true" signature="2224:2243" ph="SELECT * FRO... Words" />
           </folding>
         </state>
       </provider>

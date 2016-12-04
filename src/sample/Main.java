@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import java.sql.*;
 import java.util.ArrayList;
 
-@SuppressWarnings("duplicate")
+@SuppressWarnings("ALL")
 public class Main extends Application {
     public static ArrayList<Word> words;
 
@@ -28,14 +28,11 @@ public class Main extends Application {
     public static void main(String[] args) {
         words = new ArrayList<>();
         SQLiteConnection.init();
-
-        for (Word word : words)
-            System.out.println(word.toString());
-
         launch(args);
     }
 }
 
+@SuppressWarnings("ALL")
 class SQLiteConnection {
     private static String path = "jdbc:sqlite:database.db";
     private static Connection connection = null;
