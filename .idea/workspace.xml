@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a793bd8-b56c-45d8-9b23-af448516012b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_15_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/DeleteWord.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/DeleteWord.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/EditWord.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/sample/EditWord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.db" afterPath="$PROJECT_DIR$/database.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EnglishWords.iml" afterPath="$PROJECT_DIR$/EnglishWords.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AddWord.java" afterPath="$PROJECT_DIR$/src/sample/AddWord.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/AddWordWindow.fxml" afterPath="$PROJECT_DIR$/src/sample/AddWordWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Main.java" afterPath="$PROJECT_DIR$/src/sample/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/MainWindow.fxml" afterPath="$PROJECT_DIR$/src/sample/MainWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Settings.java" afterPath="$PROJECT_DIR$/src/sample/Settings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Style.css" afterPath="$PROJECT_DIR$/src/sample/Style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Word.java" afterPath="$PROJECT_DIR$/src/sample/Word.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/DeleteWord.java" afterPath="$PROJECT_DIR$/src/sample/DeleteWord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/EditWord.java" afterPath="$PROJECT_DIR$/src/sample/EditWord.java" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -84,14 +72,14 @@
         <option value="$PROJECT_DIR$/src/sample/MainWindow.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/sample/AddWord.java" />
         <option value="$PROJECT_DIR$/src/sample/Date.java" />
         <option value="$PROJECT_DIR$/src/sample/Word.java" />
         <option value="$PROJECT_DIR$/src/sample/Style.css" />
         <option value="$PROJECT_DIR$/src/sample/EditWord.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/EditWord.java" />
         <option value="$PROJECT_DIR$/src/sample/DeleteWord.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Settings.java" />
+        <option value="$PROJECT_DIR$/src/sample/AddWord.java" />
+        <option value="$PROJECT_DIR$/src/sample/EditWord.java" />
         <option value="$PROJECT_DIR$/src/sample/DeleteWord.java" />
       </list>
     </option>
@@ -712,7 +700,7 @@
       <workItem from="1480500108082" duration="9856000" />
       <workItem from="1480658658503" duration="25000" />
       <workItem from="1480782849636" duration="3730000" />
-      <workItem from="1480838170249" duration="9421000" />
+      <workItem from="1480838170249" duration="9759000" />
     </task>
     <task id="LOCAL-00001" summary="Avaz commited">
       <created>1480430038499</created>
@@ -777,11 +765,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480492329144</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Avaz commited">
+      <created>1480848403753</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1480848403753</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40220000" />
+    <option name="totallyTimeSpent" value="40558000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1280,6 +1275,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1385,17 +1381,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AddWord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="71" column="43" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#hasWord#0;class#AddWord#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/EditWord.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -1426,28 +1411,37 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/EditWord.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/AddWord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="71" selection-end-column="38" />
+        <state relative-caret-position="-254">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
           <folding>
-            <element signature="method#searchWords#0;class#EditWord#0" expanded="false" />
-            <element signature="method#textChanged#0;class#EditWord#0" expanded="false" />
-            <element signature="method#cancelEditing#0;class#EditWord#0" expanded="false" />
-            <element signature="method#editWord#0;class#EditWord#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#hasWord#0;class#AddWord#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/DeleteWord.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="516">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#420#444#0" expanded="true" />
             <element signature="method#backToSettings#0;class#DeleteWord#0" expanded="false" />
             <element signature="method#searchWords#0;class#DeleteWord#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/EditWord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <element signature="method#searchWords#0;class#EditWord#0" expanded="false" />
+            <element signature="method#textChanged#0;class#EditWord#0" expanded="false" />
+            <element signature="method#cancelEditing#0;class#EditWord#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -27,8 +27,8 @@ public class AddWord implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        name.setPromptText("enter word");
-        meaning.setPromptText("enter meaning");
+        name.setPromptText("word");
+        meaning.setPromptText("meaning");
         addWord.setText("Add Word");
         cancel.setText("Cancel");
     }

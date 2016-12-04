@@ -27,6 +27,9 @@ public class DeleteWord implements Initializable{
     }
 
     public void deleteWord() {
+        if(container.getFocusModel().getFocusedIndex() == -1)
+            return;
+
         String temp = container.getFocusModel().getFocusedItem().getText();
 
         String name = temp.substring(0, temp.indexOf(" -"));

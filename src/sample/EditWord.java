@@ -59,6 +59,9 @@ public class EditWord implements Initializable {
     }
 
     public void selectItem(ActionEvent event) {
+        if(container.getFocusModel().getFocusedIndex() == -1)
+            return;
+
         firstPane.setVisible(false);
         secondPane.setVisible(true);
 
