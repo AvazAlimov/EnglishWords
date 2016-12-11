@@ -1,0 +1,36 @@
+.root {
+    -fx-background-color: #0097a7;
+}
+
+.button {
+    -fx-background-radius: 8px;
+    -fx-background-color: #ffc107;
+    -fx-pref-width: 240px;
+    -fx-pref-height: 80px;
+    -fx-font-size: 32px;
+    -fx-text-fill: #212121;
+    -fx-font-family: "Cocon";
+    -fx-effect: dropshadow(two-pass-box, #424242, 10, 0.2, 0, 2);
+}
+
+.button:pressed {
+    -fx-translate-y: 2;
+    -fx-background-radius: 8px;
+    -fx-background-color: #ffb300;
+    -fx-effect: dropshadow(two-pass-box, #424242, 5, 0.2, 0, 1);
+}
+
+.text-field {
+    -fx-effect: dropshadow(two-pass-box, #424242, 5, 0.2, 0, 2);
+    -fx-alignment: center-left;
+    -fx-pref-width: 480px;
+    -fx-pref-height: 80px;
+    -fx-font-size: 32px;
+    -fx-text-fill: #212121;
+    -fx-font-family: "Cocon";
+    -fx-prompt-text-fill: #757575;
+}
+
+.text-field:focused {
+    -fx-effect: dropshadow(two-pass-box, #424242, 10, 0.2, 0, 2);
+}

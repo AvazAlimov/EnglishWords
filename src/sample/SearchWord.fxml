@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ListView?>
+
+<?import javafx.scene.control.Button?>
+<GridPane vgap="10" style="-fx-background-color: #0097a7;" alignment="CENTER"
+          xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="sample.SearchWord">
+
+    <rowConstraints>
+        <RowConstraints prefHeight="20"/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints prefHeight="20"/>
+    </rowConstraints>
+
+    <TextField fx:id="search" promptText="enter word" prefWidth="500" onKeyTyped="#addWords" GridPane.rowIndex="1"/>
+
+    <ScrollPane fitToWidth="true" fitToHeight="true" GridPane.rowIndex="2">
+        <ListView fx:id="container"/>
+    </ScrollPane>
+
+    <Button GridPane.halignment="CENTER" text="Back" GridPane.rowIndex="3" onAction="#backToSettings"/>
+
+    <stylesheets>
+        <URL value="@Style2.css"/>
+    </stylesheets>
+
+</GridPane>

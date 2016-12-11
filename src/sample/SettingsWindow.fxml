@@ -12,6 +12,7 @@
         <RowConstraints/>
         <RowConstraints/>
         <RowConstraints/>
+        <RowConstraints/>
     </rowConstraints>
     <Button fx:id="addWord" id="addWordButton" onAction="#doAction" alignment="CENTER" text="Button"
             GridPane.halignment="CENTER"
@@ -22,7 +23,10 @@
     <Button fx:id="editWord" id="editWordButton" onAction="#doAction" GridPane.rowIndex="2" alignment="CENTER"
             text="Button"
             GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
-    <Button fx:id="back" id="backButton" onAction="#doAction" GridPane.rowIndex="3" alignment="CENTER" text="Button"
+    <Button fx:id="search" id="searchButton" onAction="#doAction" GridPane.rowIndex="3" alignment="CENTER"
+            text="Search"
+            GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
+    <Button fx:id="back" id="backButton" onAction="#doAction" GridPane.rowIndex="4" alignment="CENTER" text="Button"
             GridPane.halignment="CENTER" GridPane.valignment="CENTER"/>
     <stylesheets>
         <URL value="@Style.css"/>

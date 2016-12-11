@@ -19,6 +19,7 @@ public class Settings implements Initializable {
     public Button deleteWord;
     public Button editWord;
     public Button back;
+    public Button search;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -42,6 +43,9 @@ public class Settings implements Initializable {
                 break;
             case "editWordButton":
                 parent = FXMLLoader.load(getClass().getResource("EditWord.fxml"));
+                break;
+            case "searchButton":
+                parent = FXMLLoader.load(getClass().getResource("SearchWord.fxml"));
                 break;
             default:
                 break;

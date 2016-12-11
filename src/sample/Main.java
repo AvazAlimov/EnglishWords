@@ -83,7 +83,7 @@ class SQLiteConnection {
         try {
             connection = DriverManager.getConnection(path);
             Statement statement = connection.createStatement();
-            String query = String.format("INSERT INTO Words(word,meaning,date) VALUES ('%s','%s','%s');", word, meaning, date);
+            String query = String.format("INSERT INTO Words(word,meaning,date) VALUES ('%s','%s','%s');", normalizeString(word), normalizeString(meaning), normalizeString(date));
             statement.executeUpdate(query);
             statement.close();
             connection.close();
@@ -116,5 +116,18 @@ class SQLiteConnection {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private static String normalizeString(String string) {
+        String returnString = "";
+
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i) == '\'')
+                returnString += "\'" + string.charAt(i);
+            else
+                returnString += string.charAt(i);
+        }
+
+        return returnString;
     }
 }
