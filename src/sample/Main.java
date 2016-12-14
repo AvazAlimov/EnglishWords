@@ -109,7 +109,7 @@ class SQLiteConnection {
         try {
             connection = DriverManager.getConnection(path);
             Statement statement = connection.createStatement();
-            String query = String.format("UPDATE Words SET word='%s', meaning='%s' WHERE word='%s';", changedWord, meaning, word);
+            String query = String.format("UPDATE Words SET word='%s', meaning='%s' WHERE word='%s';", normalizeString(changedWord), normalizeString(meaning), normalizeString(word));
             statement.executeUpdate(query);
             statement.close();
             connection.close();
